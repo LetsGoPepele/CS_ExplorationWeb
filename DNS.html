@@ -10,23 +10,25 @@
     <!-- Question II.2 traitée -->
     <a href="https://www.expressvpn.com/fr/dns-leak-test">L'image est présente sur cette page</a>
     
-    <form>
+    <form method="get" action="https://dyrk.org/2016/02/08/hack-se-proteger-contre-le-dns-spoofing/" onsubmit="return verifNote(this)"> <!-- On est censé accéder au site lorsque la note est valide -->
     Note de 0 à 5 : <input type="text" name="note" onblur="verifNote(this)"/>
     <br><br>
     <input type="submit" value="Valider" />
-    </form>
+    </form><br><br>
+    
     <script>
     function verifNote(note) {
-    	if (!(note~='0' || note~='1' || note~='2' || note~='3' || note~='4' || note~='5')= {
-        	surligne(note,true);
-            return false;
+    	if (note=='0' || note=='1' || note=='2' || note=='3' || note=='4' || note=='5') { // La condition a peut de chance de fonctionner
+        	surligne(note,false);
+            return true;
         }
         else {
-        	surligne(note,false);
-        	return true;
+        	surligne(note,true);
+        	return false;
         }
      }
-    </script> <!-- Question II.3 traitée -->
+    
+    </script> <!-- Question II.3 traitée --> <!-- Question II.5 traitée -->
     
     <iframe title="DNS Spoofing" src="https://dyrk.org/2016/02/08/hack-se-proteger-contre-le-dns-spoofing/" height = "500" width = "1000"/>
     <!-- Question II.4 traitée -->
