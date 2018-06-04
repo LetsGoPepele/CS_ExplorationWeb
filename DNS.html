@@ -9,5 +9,23 @@
     <!-- Recherche "DNS" sur Google Images -->
     <!-- Question II.2 traitée -->
     <a href="https://www.expressvpn.com/fr/dns-leak-test">L'image est présente sur cette page</a>
+    
+    <form>
+    Note de 0 à 5 : <input type="text" name="note" onblur="verifNote(this)"/>
+    <br><br>
+    <input type="submit" value="Valider" />
+    </form>
+    <script>
+    function verifNote(note) {
+    	if (!(note~='0' || note~='1' || note~='2' || note~='3' || note~='4' || note~='5')= {
+        	surligne(note,true);
+            return false;
+        }
+        else {
+        	surligne(note,false);
+        	return true;
+        }
+     }
+    </script> <!-- Question II.3 traitée -->
   </body>
 </html>
